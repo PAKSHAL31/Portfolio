@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { formatDate } from '@/lib/utils'
 import MDXContent from '@/components/mdx-content'
 import { getProjectBySlug, getProjects } from '@/lib/project'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
 // pre-generates the pages at build time based on the available project in the folder/app.
 export async function generateStaticParams() {
@@ -55,7 +56,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
           </header>
   
           <main className='prose mt-16 dark:prose-invert'>
-            <MDXContent source={content} />
+            <MDXRemote source={content} />
           </main>
         </div>
       </section>
