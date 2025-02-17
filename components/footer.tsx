@@ -1,4 +1,5 @@
 import { JSX, SVGProps } from 'react'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const social = [
   {
@@ -25,13 +26,42 @@ const social = [
         />
       </svg>
     )
+  },
+  {
+    name: 'Portfolio',
+    href: 'https://ranawatpakshal.co.in',
+    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+      <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 4a4 4 0 1 1-4 4 4 4 0 0 1 4-4Zm0 14c-3.33 0-6-1.67-6-3 0-1.34 2.67-3 6-3s6 1.66 6 3c0 1.33-2.67 3-6 3Z"/>
+      </svg>
+    )
   }
 ]
+
 const Footer = () => {
   return (
     <footer className='py-8'>
-      <div className='container max-w-3xl'>
-        <div className='flex flex-wrap justify-center gap-4 md:justify-between'>
+      <div className='container max-w-8xl'>
+        <div className='text-center mb-4'>
+          {/* First Name and Email */}
+          <p className='text-xl font-semibold'>Pakshal</p>
+          <a
+            href='mailto:your-email@example.com' // Replace with your email
+            className='text-muted-foreground hover:text-foreground flex items-center justify-center'
+          >
+          <HiOutlineMail className='h-5 w-5 mr-2' />
+            ranawatpakshal31@gmail.com {/* Replace with your email */}
+          </a>
+        </div>
+    
+        <div className='flex justify-between items-center'>
+          {/* Left Side Copyright Text */}
+          <p className='text-sm text-muted-foreground'>
+            &copy; {new Date().getFullYear()} Pakshal Ranawat. All rights reserved.
+          </p>
+
+          {/* Right Side Social Links */}
+          <div className='flex gap-4'>
             {social.map(item => (
               <a
                 key={item.name}
@@ -45,6 +75,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
+        </div>
       </div>
     </footer>
   )
