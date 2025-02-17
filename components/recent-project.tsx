@@ -8,7 +8,7 @@ const RecentProjects = async() => {
   return (
     <section className='pb-24'>
       <div>
-        <h2 className='title mb-12'>Recent projects</h2>
+        <h2 className='title mb-12 text-4xl'>Recent projects</h2>
         <AllProjects projects={projects} />
 
         <Link

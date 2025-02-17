@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { formatDate } from '@/lib/utils'
-import MDXContent from '@/components/mdx-content'
 import { getProjectBySlug, getProjects } from '@/lib/project'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
@@ -28,7 +27,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
   
     return (
       <section className='pb-24 pt-32'>
-        <div className='container max-w-3xl'>
+        <div className='container max-w-4xl'>
           <Link
             href='/projects'
             className='mb-8 inline-flex items-center gap-2 text-sm font-light text-muted-foreground transition-colors hover:text-foreground'
@@ -55,7 +54,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
             </p>
           </header>
   
-          <main className='prose mt-16 dark:prose-invert'>
+          <main className='prose mt-16 dark:prose-invert max-w-full'>
             <MDXRemote source={content} />
           </main>
         </div>
