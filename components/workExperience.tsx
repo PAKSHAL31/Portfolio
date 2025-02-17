@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 const EXPERIENCES = [
   {
     img: "/images/logos/c-icon.png",
-    year: "2022 - 2023",
+    year: "07/2022 - 07/2023",
     role: "Technical Tester",
     company: "Link Group",
     description:
@@ -16,7 +16,7 @@ const EXPERIENCES = [
   },
   {
     img: "/images/logos/web-icon.png",
-    year: "2021",
+    year: "10/2021 - 12/2021",
     role: "Web Development Intern",
     company: "Shantighar Social Service Society",
     description:
@@ -25,7 +25,7 @@ const EXPERIENCES = [
   },
   {
     img: "/images/logos/android-icon.png",
-    year: "2020 - 2021",
+    year: "11/2020 - 10/2021",
     role: "App Development Intern",
     company: "YWCA of Bombay",
     description:
@@ -34,7 +34,7 @@ const EXPERIENCES = [
   },
   {
     img: "/images/logos/wd-icon.png",
-    year: "2021",
+    year: "03/2021 - 05/2021",
     role: "Web Development Intern",
     company: "DBIT Placement Cell",
     description:
@@ -76,21 +76,19 @@ const WorkExperience = () => {
               />
             </div>
 
-            {/* Content */}
             <div className="w-full">
               <p className="text-sm text-gray-500 dark:text-gray-400">{experience.year}</p>
               <h6 className="text-lg font-semibold">{experience.role}</h6>
               <span className="text-sm text-gray-600 dark:text-gray-300">{experience.company}</span>
               <p className="my-4">{experience.description}</p>
 
-              {/* Technologies */}
               <div className="flex flex-wrap">
-                {experience.technologies.map((tech, index) => (
+                {experience.technologies.map((technology, index) => (
                   <span
                     key={index}
                     className="mr-2 mt-2 rounded-full border border-gray-400 dark:border-gray-600 px-2 py-1 text-sm text-gray-600 dark:text-gray-300"
                   >
-                    {tech}
+                    {technology}
                   </span>
                 ))}
               </div>

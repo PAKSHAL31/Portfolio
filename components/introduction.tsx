@@ -12,7 +12,7 @@ const IntroSection = () => {
       <section className='flex flex-col items-center justify-center pb-8 pt-20 xl:flex-row'>
         <div className='flex w-full flex-col items-center justify-between px-6 py-2 xl:flex-row xl:py-20'>
           {/* Text Section */}
-          <div className='max-w-2xl text-center xl:max-w-lg xl:text-left order-2 xl:order-none'>
+          <div className='order-2 max-w-2xl text-center xl:order-none xl:max-w-lg xl:text-left'>
             <span className='title text-xl font-semibold'>
               Software Developer
             </span>
@@ -26,19 +26,21 @@ const IntroSection = () => {
             </p>
 
             <div className='mt-6 flex flex-col items-center gap-6 xl:flex-row'>
-              <Button
-                variant='outline'
-                size='lg'
-                className='flex items-center gap-2 border-green-500 uppercase text-green-500 hover:bg-green-500 hover:text-white'
-              >
-                <span>Download CV</span>
-                <FaFileDownload className='text-xl' />
-              </Button>
+              <a href='/Pakshal_Mahavir_Ranawat_Resume.pdf' download>
+                <Button
+                  variant='outline'
+                  size='lg'
+                  className='flex items-center gap-2 border-green-500 uppercase text-green-500 hover:bg-green-500 hover:text-white'
+                >
+                  <span>Download CV</span>
+                  <FaFileDownload className='text-xl' />
+                </Button>
+              </a>
             </div>
           </div>
 
           {/* Image Section */}
-          <div className='order-1 xl:order-none mb-8 xl:mb-0'>
+          <div className='order-1 mb-8 xl:order-none xl:mb-0'>
             <Photo />
           </div>
         </div>
