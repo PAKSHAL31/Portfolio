@@ -5,8 +5,7 @@ const ContactPage = () => {
     return (
         <section className='pb-24 pt-40'>
           <div className='container max-w-3xl'>
-            <h2 className='title'>Let's connect !</h2>
-    
+            <h2 className='title'>Let&apos; connect !</h2>
             <ContactForm />
           </div>
         </section>

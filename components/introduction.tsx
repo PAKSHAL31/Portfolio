@@ -20,8 +20,8 @@ const IntroSection = () => {
               <AnimatedText text={["I'm Pakshal", 'Ranawat']} />
             </h1>
             <p className='mt-4 max-w-[600px] text-lg leading-relaxed text-gray-700'>
-              I'm a passionate software developer with experience in web and
-              mobile development. I’m diligent, responsible, and always eager to
+              I&apos;m a passionate software developer with experience in web and
+              mobile development. I&apos;m diligent, responsible, and always eager to
               explore new technologies and programming languages.
             </p>
 
