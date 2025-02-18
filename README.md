@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Portfolio
 
-## Getting Started
+This is my personal web portfolio built using **Next.js**, **Tailwind CSS**, **Framer Motion**, and **MDX** for content management. The website showcases my projects, skills, and experience, with an interactive and dynamic layout. It is deployed on Vercel for fast and reliable hosting.
 
-First, run the development server:
+Check it out: [Live Portfolio](https://pakshal-portfolio-git-main-pakshal-ranawats-projects.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Smooth Animations**: **Framer Motion** is used to add smooth, interactive animations to various sections of the website, making the user experience more dynamic and engaging.
+  
+- **Dark Mode & Light Mode**: The website supports both dark and light modes. Users can toggle between them for a personalized viewing experience using **Next Themes**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **MDX Integration**: **MDX** allows content management with markdown syntax alongside React components. This provides flexibility to create rich, dynamic pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Responsive Design**: The portfolio is fully responsive, built with **Tailwind CSS**, ensuring an optimal experience across all devices.
 
-## Learn More
+- **Contact Form**: The contact form on the portfolio uses **Resend** to send emails directly to me (only I receive the emails). This allows visitors to easily reach out.
 
-To learn more about Next.js, take a look at the following resources:
+- **Dynamic Project Pages**: Each project on the portfolio has its own dynamic page, using **Gray Matter** to extract metadata from the MDX files. The content is rendered using **next-mdx-remote**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Form Validation**: Form validation is handled with **Zod**, ensuring data integrity and proper input checks before submission.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Toast Notifications**: **Sonner** is used to display toast notifications to inform users about the status of their form submissions.
 
-## Deploy on Vercel
+- **Icons**: **Lucide React** icons are used throughout the website to add high-quality vector icons.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Libraries Used
+
+- **Next.js**: Framework used for server-side rendering and building the app.
+- **Tailwind CSS**: Utility-first CSS framework used to style the application.
+- **Framer Motion**: For animations and transitions.
+- **MDX**: For managing and rendering content with markdown and React components.
+- **Zod**: For form validation and schema validation.
+- **Resend**: For sending emails from the contact form (the emails go to me directly).
+- **Sonner**: For toast notifications to inform users about form submission status.
+- **Gray Matter**: To extract metadata from MDX files for dynamic content display.
+- **Sugar High**: For applying CSS utilities.
+- **Class Variance Authority (CVA)**: Helps in creating reusable component variants.
+- **Tailwind Merge**: To help merge conflicting Tailwind CSS classes.
+- **Radix UI**: For building accessible UI components like slots.
+- **Lucide React**: For using vector icons in the project.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/PakshalRanawat/your-portfolio-repo.git
+   ```
+2. **Install Dependencies:**
+
+        npm install
+        npm run dev
+
+3. Now run the application on the localhost.
