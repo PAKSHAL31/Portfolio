@@ -20,7 +20,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="mb-36">
-      <h2 className='title -my-6 mb-12 text-4xl'>Skills</h2>
+      <h2 className='title -my-6 mb-12 text-4xl mt-5 xl:mt-0'>Skills</h2>
 
         <div ref={ref} className="grid md:grid-cols-2 gap-6">
           {skills.map((skill, index) => (
