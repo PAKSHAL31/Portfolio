@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { getProjects } from '@/lib/project'
 import AllProjects from '@/components/projects'
 
-const RecentProjects = async() => {
-    const projects = await getProjects(2)
+const RecentProjects = async () => {
+  const projects = await getProjects(2)
 
   return (
     <section className='pb-24'>
-      <div>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <h2 className='title mb-12 text-4xl'>Recent projects</h2>
         <AllProjects projects={projects} />
 

@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   return projects.map(project => ({ slug: project.slug })) || null
 }
 
-// await params propmis {intially not awaiting it - gave errors} 
+// await params propmis {intially not awaiting it - gave errors}
 const Project = async (props: { params: Promise<{ slug: string }> }) => {
   const params = await props.params
   console.log(params.slug)
@@ -23,7 +23,21 @@ const Project = async (props: { params: Promise<{ slug: string }> }) => {
   }
 
   const { metadata, content } = project
-  const { title, author, image, publishedOn } = metadata
+  const { title, author, image, publishedOn, skills } = metadata
+  const colorClasses = [
+    'bg-red-500',
+    'bg-green-500',
+    'bg-blue-500',
+    'bg-yellow-500',
+    'bg-purple-500',
+    'bg-pink-500',
+    'bg-indigo-500',
+    'bg-teal-500',
+    'bg-emerald-500',
+    'bg-orange-500',
+    'bg-sky-500',
+    'bg-lime-500'
+  ]
 
   return (
     <section className='pb-24 pt-32'>
@@ -52,9 +66,29 @@ const Project = async (props: { params: Promise<{ slug: string }> }) => {
           <p className='mt-3 text-xs text-muted-foreground'>
             {author} / {formatDate(publishedOn ?? '')}
           </p>
+          {skills && skills.length > 0 && (
+            <div className='mt-4 flex flex-wrap gap-2'>
+              {skills && skills.length > 0 && (
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {skills.map((skill, index) => (
+                    <span
+                      key={index}
+                      className={`rounded-md px-2 py-1 text-xs font-medium text-white ${
+                        colorClasses[
+                          Math.floor(Math.random() * colorClasses.length)
+                        ]
+                      }`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </header>
 
-        <main className='prose mt-16 max-w-full dark:prose-invert'>
+        <main className='prose mt-10 max-w-full dark:prose-invert'>
           <MDXRemote source={content} />
         </main>
       </div>

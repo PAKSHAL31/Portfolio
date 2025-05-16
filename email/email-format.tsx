@@ -4,7 +4,7 @@ interface ContactFormEmailProps {
     message: string
   }
   
-  const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = async ({
+  const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
     name,
     email,
     message

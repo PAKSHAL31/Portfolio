@@ -16,6 +16,7 @@ export type ProjectMetadata = {
   publishedOn?: string
   image?: string
   slug: string
+  skills?: string[] 
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project | null> {

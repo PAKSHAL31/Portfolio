@@ -1,0 +1,71 @@
+---
+title: Cloud-Based Learning Management System (LMS)
+summary: A full-stack serverless LMS with secure video streaming, role-based access, Stripe payments, and AWS-powered scalability.
+publishedOn: '2025-05-01'
+author: 'Pakshal Ranawat'
+image: '/images/projects/lms_image.png'
+skills: ["Next.js", "Express.js", "Clerk", "Stripe API", "Tailwind CSS", "AWS S3", "CloudFront", "DynamoDB", "Docker", "AWS Lambda", "API Gateway", "Vercel", "NoSQL"]
+---
+
+## Overview
+
+**Cloud-Based Learning Management System (LMS)** is a robust and scalable platform that enables teachers to upload video-based courses and students to enroll, pay, and stream content securely. The platform is fully serverless and optimized for cost, performance, and security.
+
+---
+
+## Role-Based Functionality
+
+- **Teacher Role**:
+  - Teachers can securely sign in via Clerk and access their dashboard.
+  - They can upload large course videos directly to AWS S3 using pre-signed URLs.
+  - Teachers can create courses, manage uploaded content, and track enrolled students.
+
+- **Student Role**:
+  - Students can browse available courses and enroll through a secure, Stripe-integrated multi-step checkout process.
+  - Once enrolled, students gain access to streaming content delivered through CloudFront with pre-signed URLs, ensuring time-limited access to private videos.
+  - Students can view purchase history and securely manage their course dashboard.
+
+---
+
+## Frontend Implementation
+
+- Built using **Next.js** with dynamic routing and React Server Components.
+- Applied **Tailwind CSS** and **Radix UI** for building a responsive, accessible user interface.
+- Clerk was integrated on the frontend for authentication and role management.
+- User flows include course discovery, payment, dashboard access, and secure video viewing.
+- Hosted on **Vercel** with GitHub-based CI/CD workflows for seamless deployment and rollback.
+
+---
+
+## Backend Architecture
+
+- The backend was developed using **Express.js** and Dockerized for portability.
+- All routes are secured and validated to enforce user roles (teacher/student).
+- Video upload requests generate **pre-signed S3 URLs**, allowing large file transfers while bypassing the 10MB API Gateway limit.
+- Data is stored in **Amazon DynamoDB**, organizing courses, enrollments, and transactions with efficient NoSQL schema.
+- Stripe is used to handle secure payments, supporting multi-step checkout and authenticated user validation.
+
+---
+
+## AWS Integration
+
+- **AWS S3** stores all uploaded video content.
+- **AWS CloudFront** is used to distribute videos securely using pre-signed CloudFront URLs, enabling time-restricted streaming access.
+- **Pre-Signed S3 URLs** allow teachers to upload large video files directly without routing through the backend.
+- The backend is Dockerized and deployed to **AWS Lambda** using `serverless-http`, ensuring scalability and cost-efficiency.
+- **API Gateway** serves as the secure entry point for all backend HTTP requests and routes them to Lambda functions.
+- DynamoDB is used to store all critical app data (courses, users, payments), offering high availability and scalability.
+
+---
+
+## Deployment & DevOps
+
+- The frontend is deployed on **Vercel**, using automatic deployment pipelines triggered by GitHub commits.
+- The backend runs on **AWS Lambda**, deployed via the Serverless Framework with Docker support.
+- Leveraged **Git** and modular design patterns for maintainability and collaborative development.
+
+---
+
+## Live Demo
+
+Visit the project: <a href="https://next-lms-management.vercel.app/" target="_blank" rel="noopener noreferrer">next-lms-management.vercel.app</a>

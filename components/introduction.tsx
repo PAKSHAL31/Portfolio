@@ -47,7 +47,7 @@ const IntroSection = () => {
       </section>
 
       {/* Stats Section */}
-      <section className='mt-12'>
+      <section className='mt-0'>
         <Stats />
       </section>
     </div>

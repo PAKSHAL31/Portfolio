@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 
 interface AnimatedTextProps {
-  text: string[]; // Expecting an array of strings for multiple lines
+  text: string[]; // depending on how many lines.
   className?: string;
 }
 
